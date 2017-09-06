@@ -10,6 +10,8 @@ public class DoMath {
 		System.out.println(Calculate.cube(4));
 		Calculate.average(4.0,6.0);
 		System.out.println(Calculate.average(4.0,6.0));
+		Calculate.average1(5.0,9.0,120.0);
+		System.out.println(Calculate.average1(5.0,9.0,120.0));
 	}
 
 }

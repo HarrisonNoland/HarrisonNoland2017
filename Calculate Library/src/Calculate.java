@@ -15,4 +15,11 @@ public class Calculate {
 		 double average = (operand+operand1)/2;
 		 return average;
 	 }
+	 public static double average1(double operand, double operand1, double operand2) {
+	 	double average = (operand+operand1+operand2)/3;
+	 			return average;
+	 }
+	 public static double toDegrees(double operand, double operand1) {
+		 double toDegrees = 
+	 }
 }
