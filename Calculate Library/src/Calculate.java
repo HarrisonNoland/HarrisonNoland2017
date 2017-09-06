@@ -11,8 +11,8 @@ public class Calculate {
 		 int cube = operand*operand*operand;
 		 return cube;
 	 }
-	 public static double average(double operand) {
-		 double average = ()/2;
+	 public static double average(double operand, double operand1) {
+		 double average = (operand+operand1)/2;
 		 return average;
 	 }
 }
