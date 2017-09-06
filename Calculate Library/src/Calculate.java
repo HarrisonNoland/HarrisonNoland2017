@@ -20,6 +20,8 @@ public class Calculate {
 	 			return average;
 	 }
 	 public static double toDegrees(double operand, double operand1) {
-		 double toDegrees = 
+		 double toDegrees = 0;
+		 return 0;
 	 }
+	 
 }
