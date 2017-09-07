@@ -36,8 +36,17 @@ public class Calculate {
 		double discriminant = (integer2*integer2)-(4*integer1*integer3);
 		return discriminant;
 		}
-	 public static String toImproperFrac(int wholenumber,int numerator,int denominator) {
-		 int  = wholenumber*denominator+numerator;
-		 return "/"+denominator);
+	 public static String toImproperFrac(int Wholenumber,int Numerator,int Denominator) {
+		 int  = Wholenumber*Denominator+Numerator;
+		 return "/"+Denominator);
 	 }
+	public static String toMixedNum(int Numerator, int Denominator) {
+		int wholenumber = Numerator/Denominator;
+		int nnumerator = Numerator%Denominator;
+		return (wholenumber+"_"+nnumerator+"/"+Denominator);
 }
+	public static String foil(int a, int b, int c, int d) {
+		int first + a*c;
+		int second (a*d)+(b*c);
+		int third c*d;
+		return (first+"x^2"+"+"+second+"x"+"+"+third);
