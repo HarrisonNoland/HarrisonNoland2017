@@ -32,9 +32,12 @@ public class Calculate {
 		 double toRadians = operand/(180*3.14159);
 		 return toRadians;
 	 }
-	 public static double discriminant(double operand,double ,double operand) {
-		double discriminant = (integer1*integer)-(4*integer*integer);
+	 public static double discriminant(double integer1,double integer2 ,double integer3) {
+		double discriminant = (integer2*integer2)-(4*integer1*integer3);
 		return discriminant;
+		}
+	 public static String toImproperFrac(int wholenumber,int numerator,int denominator) {
+		 int  = wholenumber*denominator+numerator;
+		 return "/"+denominator);
 	 }
-	 
 }

@@ -16,6 +16,8 @@ public class DoMath {
 		System.out.println(Calculate.toDegrees(30));
 		Calculate.toRadians(40);
 		System.out.println(Calculate.toRadians(40));
+		Calculate.discriminant(40.0, 20.0, 8.0);
+		System.out.println(Calculate.discriminant(40.0, 20.0, 8.0));
 	}
 
 }
