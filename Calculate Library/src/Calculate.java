@@ -43,10 +43,6 @@ public class Calculate {
 		 return "/"+Denominator);
 	 }
 	 //toMixedNum converts an improper fraction into a mixed numbe
-	 public static String toImproperFrac(int Wholenumber,int Numerator,int Denominator) {
-		 int  = Wholenumber*Denominator+Numerator;
-		 return "/"+Denominator);
-	 }
 	public static String toMixedNum(int Numerator, int Denominator) {
 		int wholenumber = Numerator/Denominator;
 		int nnumerator = Numerator%Denominator;
@@ -60,12 +56,6 @@ public class Calculate {
 		return (first+"x^2"+"+"+second+"x"+"+"+third);
 	}
 	//isDivisibleBy determines whether or not one integer is evenly divisible by another
-	public static String foil(int a, int b, int c, int d) {
-		int first + a*c;
-		int second (a*d)+(b*c);
-		int third c*d;
-		return (first+"x^2"+"+"+second+"x"+"+"+third);
-	}
 		public static boolean isDivisibleBy(int a, int b) {
 			if(a % b == 0){
 				return true;
