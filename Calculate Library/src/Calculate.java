@@ -119,8 +119,5 @@ public class Calculate {
 			a += .5;
 			return(a / 100);
 			}
-<<<<<<< HEAD
 		}
-=======
 		}
->>>>>>> origin/master
