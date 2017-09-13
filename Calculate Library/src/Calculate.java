@@ -37,25 +37,21 @@ public class Calculate {
 		double discriminant = (integer2*integer2)-(4*integer1*integer3);
 		return discriminant;
 		}
-<<<<<<< HEAD
 	 //toImproperFrac converts a mixed number into an improper fraction
 	 public static String toImproperFrac(int a,int b,int c) {
 		 int  = Wholenumber*Denominator+Numerator;
 		 return "/"+Denominator);
 	 }
-	 //toMixedNum converts an improper fraction into a mixed number
-=======
+	 //toMixedNum converts an improper fraction into a mixed numbe
 	 public static String toImproperFrac(int Wholenumber,int Numerator,int Denominator) {
 		 int  = Wholenumber*Denominator+Numerator;
 		 return "/"+Denominator);
 	 }
->>>>>>> origin/master
 	public static String toMixedNum(int Numerator, int Denominator) {
 		int wholenumber = Numerator/Denominator;
 		int nnumerator = Numerator%Denominator;
 		return (wholenumber+"_"+nnumerator+"/"+Denominator);
 }
-<<<<<<< HEAD
 	//foil converts a binomial multiplication into a quadratic equation
 	public static String foil(int a, int b, int c, int d) {
 		int first = a*c;
@@ -64,14 +60,12 @@ public class Calculate {
 		return (first+"x^2"+"+"+second+"x"+"+"+third);
 	}
 	//isDivisibleBy determines whether or not one integer is evenly divisible by another
-=======
 	public static String foil(int a, int b, int c, int d) {
 		int first + a*c;
 		int second (a*d)+(b*c);
 		int third c*d;
 		return (first+"x^2"+"+"+second+"x"+"+"+third);
 	}
->>>>>>> origin/master
 		public static boolean isDivisibleBy(int a, int b) {
 			if(a % b == 0){
 				return true;
@@ -79,12 +73,8 @@ public class Calculate {
 				return false;
 			}
 		}
-<<<<<<< HEAD
 		//absValue returns the absolute value of the number passed
 		public static double absValue(double a){
-=======
-		public static double absvalue(double a){
->>>>>>> origin/master
 			double x = a - 0;
 			if(x > 0){
 				return x;
@@ -92,10 +82,7 @@ public class Calculate {
 				return 0 - a;
 			}
 		}
-<<<<<<< HEAD
 		//max returns the larger of the values passed
-=======
->>>>>>> origin/master
 		public static double max(double a, double b){
 			if(a > b){
 				return a;
@@ -103,10 +90,7 @@ public class Calculate {
 				return b;
 			}
 		}
-<<<<<<< HEAD
 		//max overload the max method
-=======
->>>>>>> origin/master
 		public static double max(double a, double b, double c){
 			if (a > b && a > c){
 				return a;
@@ -119,10 +103,7 @@ public class Calculate {
 			}
 			return(2.4);
 		}
-<<<<<<< HEAD
 		//min returns the smaller value passed
-=======
->>>>>>> origin/master
 		public static int min(int a, int b){
 			if(a < b){
 				return a;
@@ -132,10 +113,7 @@ public class Calculate {
 			}
 			return(2);
 		}
-<<<<<<< HEAD
 		//round2 rounds a double correctly to 2 decimal places
-=======
->>>>>>> origin/master
 		public static double round2(double a){
 			a = a * 100;
 			a += .5;
