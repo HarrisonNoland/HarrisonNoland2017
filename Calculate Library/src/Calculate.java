@@ -50,3 +50,53 @@ public class Calculate {
 		int second (a*d)+(b*c);
 		int third c*d;
 		return (first+"x^2"+"+"+second+"x"+"+"+third);
+	}
+		public static boolean isDivisibleBy(int a, int b) {
+			if(a % b == 0){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		public static double absvalue(double a){
+			double x = a - 0;
+			if(x > 0){
+				return x;
+			}else{ 
+				return 0 - a;
+			}
+		}
+		public static double max(double a, double b){
+			if(a > b){
+				return a;
+			}else{
+				return b;
+			}
+		}
+		public static double max(double a, double b, double c){
+			if (a > b && a > c){
+				return a;
+			}
+			if(b > a && b > c){
+				return b;
+			}
+			if(c > a && c > b){
+				return c;
+			}
+			return(2.4);
+		}
+		public static int min(int a, int b){
+			if(a < b){
+				return a;
+			}
+			if(b < a){
+				return b;
+			}
+			return(2);
+		}
+		public static double round2(double a){
+			a = a * 100;
+			a += .5;
+			return(a / 100);
+			}
+		}
