@@ -98,8 +98,6 @@ public class Calculate {
 
     public static double round2(double orig) {
 
-
-
         int tempInt = (int) (orig * 1000);
         int num = temInt % 10;
         tempInt = tempInt / 10;
@@ -169,3 +167,28 @@ public class Calculate {
 
 }
 }
+public static String quadForm(int a, int b, int c) {
+	if (discriminant(a,b,c) < 0) {
+		return "no real roots";
+	}else if (a == 0) {
+		throw new IllegalArgumentException("not a quadratic function");
+	}
+}
+double rootNum1 = (-b+ sqrt(discriminant))/(2*a);
+			double rootNum2 = (-b- sqrt(discriminant))/(2*a);
+			if(rootNum1 != rootNum2) {
+				rootNum1 = round2(rootNum1);
+				rootNum2 = round2(rootNum2);
+				if(rootNum1 > rootNum2) {
+					return rootNum2 + " and " + rootNum1;
+				}else{
+					return rootNum1 + " and " + rootNum2;
+				}
+			}else{
+				rootNum1 = round2(rootNum1);
+				return rootNum1 +"";
+			}
+		}
+	}
+
+		
