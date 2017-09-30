@@ -1,8 +1,8 @@
 //Harrison Noland
- //September 6, 2017
- //Self written math library
+//September 6, 2017
+//Self written math library
 public class Calculate {
-	//square of a number
+    //square of a number
     public static int square(int operand) {
         int square = operand*operand;
         return square;
@@ -98,15 +98,16 @@ public class Calculate {
 
     public static double round2(double orig) {
 
+
         int tempInt = (int) (orig * 1000);
-        int num = temInt % 10;
+        int num = tempInt % 10;
         tempInt = tempInt / 10;
         if (num >= 5 && tempInt > 0) {
             tempInt++;
         } else if {
             (num <= -5 && tempInt < 0)
             tempInt--;
-            result = tempInt / 100.0;
+           double result = tempInt / 100.0;
             return result;
         }
     }
@@ -155,40 +156,49 @@ public class Calculate {
 
     }
 
-    public static double sqrt(double operand){
-        for(double i= 0.1; i<= operand; i+= 0.1){
-            double multiply = i * i;
-            if(Calculate.absValue(multiply - operand) <=0.1){
-                return Calculate.round2(i);
-            }
+    public static double sqrt(double number){
+
+        if(number < 0) {
+            throw new IllegalArgumentException("can't find square root of negative number");
         }
-        return(2.0);
+        double i;
+        for(i = 0; (i * i) < number; i++) {}
+        while((i * i) > number) {
+            i -= 0.1;
+        }
+        while(i * i < number) {
+            i += 0.01;
+        }
+        while(i * i > number) {
+            i -= 0.001;
+        }
+        return round2(i);
     }
-
-}
-}
-public static String quadForm(int a, int b, int c) {
-	if (discriminant(a,b,c) < 0) {
-		return "no real roots";
-	}else if (a == 0) {
-		throw new IllegalArgumentException("not a quadratic function");
-	}
-}
-double rootNum1 = (-b+ sqrt(discriminant))/(2*a);
-			double rootNum2 = (-b- sqrt(discriminant))/(2*a);
+    }
+    //method for quadratic formula
+    public static String quadForm(int a, int b, int c) {
+       double discriminant = discriminant(a,b,c);
+        if (discriminant(a,b,c) < 0) {
+            return "no real roots";
+        }else if (a == 0) {
+            throw new IllegalArgumentException("not a quadratic function");
+        }
+    double rootNum1 = (-b+ sqrt(discriminant))/(2*a);
+    double rootNum2 = (-b- sqrt(discriminant))/(2*a);
 			if(rootNum1 != rootNum2) {
-				rootNum1 = round2(rootNum1);
-				rootNum2 = round2(rootNum2);
-				if(rootNum1 > rootNum2) {
-					return rootNum2 + " and " + rootNum1;
-				}else{
-					return rootNum1 + " and " + rootNum2;
-				}
-			}else{
-				rootNum1 = round2(rootNum1);
-				return rootNum1 +"";
-			}
-		}
-	}
+                    rootNum1 = round2(rootNum1);
+                    rootNum2 = round2(rootNum2);
+                    if(rootNum1 > rootNum2) {
+                    return rootNum2 + " and " + rootNum1;
+                    }else{
+                    return rootNum1 + " and " + rootNum2;
+                    }
+                    }else{
+                    rootNum1 = round2(rootNum1);
+                    return rootNum1 +"";
+                    }
+                    }
+                    }
 
-		
+
+
