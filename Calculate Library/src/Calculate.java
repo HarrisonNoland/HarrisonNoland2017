@@ -174,7 +174,6 @@ public class Calculate {
         }
         return round2(i);
     }
-    }
     //method for quadratic formula
     public static String quadForm(int a, int b, int c) {
        double discriminant = discriminant(a,b,c);
