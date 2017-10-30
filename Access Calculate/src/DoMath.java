@@ -20,17 +20,14 @@ public class DoMath {
 		System.out.println(Calculate.discriminant(40.0, 20.0, 8.0));
 		Calculate.toImproperFrac(4,5,6);
 		System.out.println(Calculate.toImproperFrac(4,5,6));
-<<<<<<< HEAD
 		Calculate.toMixedNum(4,8);
 		System.out.println(Calculate.toMixedNum(4,8));
 		Calculate.foil(7,8,4,2);
 		System.out.println(Calculate.foil(7,8,4,2));
-=======
-		Calculate.toMixedNum(4,8):
+		Calculate.toMixedNum(4,8);
 		System.out.println(Calculate.toMixedNum(4,8));
 		Calculate.foil(7,8,4,2);
-		System.out.println(Calculate.foil(7,8,4,2);
->>>>>>> origin/master
+		System.out.println(Calculate.foil(7,8,4,2));
 	}
 
 }
