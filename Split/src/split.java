@@ -20,6 +20,7 @@ public class split {
 	
 		System.out.println(Arrays.toString("I like apples!".split("")));
 		System.out.println(Arrays.toString("I really like really red apples".split("really")));
+	}
 		
 
 		//Your task Part 1:
@@ -27,6 +28,17 @@ public class split {
 		* use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside
 		* What if it's a fancy sandwich with multiple pieces of bread?
 		*/
+		public static void midOfSandwich(String sandwich){
+			String[] breadArray = sandwich.split("bread");
+			if(breadArray.length <= 2){
+				System.out.println("Not a sandwich");
+			}else{
+			for(int i = 1; i <breadArray.length; i++){
+				String breadMiddleStatement = breadArray[i];
+				System.out.println("Between pieces of bread is : " + breadMiddleStatement);
+			}
+			}
+			}
 
 
 		//Your task Part 2:
@@ -34,5 +46,21 @@ public class split {
 		* use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
 		* Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
+			public static void midOfSandwichWithSpaces(String sandwich){
+				String [] sandwichNumber2 = sandwich.split("bread");
+				if(sandwichNumber2.length <= 2){
+					System.out.println("Not a sandwich");
+				}else {
+					if(sandwichNumber2[1].equals(" ")){
+						System.out.println("Not a sandwich");
+					}else{
+					for(int i = 1; i < sandwichNumber2.length-1; i++){
+						String insideBread = sandwichNumber2[i];
+						System.out.println("Between pieces of bread(with spaces) is: " + insideBread);
+					}
+					}
+				}
+
+			}
 	}
-}
+
