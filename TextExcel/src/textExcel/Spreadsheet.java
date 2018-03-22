@@ -33,7 +33,7 @@ public class Spreadsheet implements Grid {
 		public Cell getCell(Location loc)
 		{
 			// TODO Auto-generated method stub
-			return null;
+			return ;
 		}
 
 		@Override
