@@ -1,13 +1,27 @@
 package textExcel;
 
 public class TextCell implements Cell{
-		String text;
-	public fullCellText(String text) {
-		if(text.indexof(\"")>=0 )
-		return "";
+	private String text;
+	public TextCell(String input) {
+		this.text= input;
 	}
-		public String abbreviatedCellText() {
-			
-		
-		}
+	public fullCellText(String text) {
+		return text;
+	}
+	public String abbreviatedCellText() {
+			if(text.contains("/"")){
+					if(text.length()<12) {
+						String print = text.substring(1,text.length()-1);
+						for(int i=0;i<(12-text.length();i++){
+							print= print +" ";
+						}
+						return print;
+		}else { 
+						return text.substring(1, 11);
+						
+	}else {
+		return text.substring(0,10);
+			}
+				}
 }
+		

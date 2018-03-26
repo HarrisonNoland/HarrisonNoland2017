@@ -3,8 +3,9 @@ package textExcel;
 // Update this file with your own code.
 
 public class Spreadsheet implements Grid {
+	private Cell[][] boxes;
 	public Spreadsheet() {
-		Cell[][] cell = new Cell[getRows()][getCols()];
+	 boxes = new Cell[20][12];
 	}
 
 
@@ -30,10 +31,11 @@ public class Spreadsheet implements Grid {
 		}
 
 		@Override
-		public Cell getCell(Location loc)
+		public Cell getCell(Location place )
 		{
+			return boxes[place.getRow()][place.getCol()];
 			// TODO Auto-generated method stub
-			return ;
+			
 		}
 
 		@Override
