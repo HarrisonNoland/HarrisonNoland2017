@@ -11,7 +11,7 @@ public class TextCell implements Cell{
 	public String abbreviatedCellText() {
 			if(text.contains("/"")){
 					if(text.length()<12) {
-						String print = text.substring(1,text.length()-1);
+						String print = text.substring(1,text.length()-1);//goes from 1st index to last-1
 						for(int i=0;i<(12-text.length();i++){
 							print= print +" ";
 						}
