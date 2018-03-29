@@ -13,9 +13,56 @@ public class Spreadsheet implements Grid {
 		public String processCommand (String command)
 		{
 			// TODO Auto-generated method stub
+		if(command.equalsIgnoreCase("clear")) {
+			for(int i = 0;i<boxes.length;i++) {
+				for(int k = 0; k<boxes[i].length;k++) {
+					boxes[i][k]= new EmptyCell();
+				}
+			}
+			return getGridText();
+		}else if(command.contains("=")) {
+			assignCell(command);
+			return getGridText();
+		}else if(command.length()==2||command.length()==3) {
+			Location position=new SpreadsheetLocation(command);
+			return inspectCell(position);
+		//clear cell
+		}else if (command.toLowerCase().contains("clear")&& command.length()>5){
+			Location position=new SpreadsheetLocation(command.substring(6));
+			clearCell(position);
+			return getGridText();
+		}else {
 			return "";
 		}
-
+		}
+		public String inspectCell(Location loc) {
+			return getCell(loc).fullCellText();
+		}
+		public String assignCell(String input) {
+			String[] assignment=input.split("=", 2);
+			Location loc=new SpreadsheetLocation(assignment[0].substring(0,assignment[0].indexOf(" ")));
+			if(assignment[1].contains("\"")) {
+				spreadsheetArray[loc.getRow()][loc.getCol()]=new TextCell(assignment[1].substring(1));
+			}else if(assignment[1].contains("(")&&assignment[1].contains(")")){
+				
+			}else {
+				spreadsheetArray[loc.getRow()][loc.getCol()]=new ValueCell(assignment[1].substring(1));
+			}
+			
+			return getGridText();
+			
+		}
+		public String clear() {
+			for (int i=0;i<spreadsheetArray.length;i++) {
+				for (int j=0; j<spreadsheetArray[i].length;j++) {
+					spreadsheetArray[i][j]=new EmptyCell();
+				}
+			}
+			return getGridText();
+		}
+		public String clearCell(Location loc) {
+			boxes[loc.getRow()][loc.getCol()]=new EmptyCell();
+			return getGridText();
 		@Override
 		public int getRows ()
 		{
